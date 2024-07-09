@@ -52,5 +52,11 @@ public class PersonController
 	{
 		return prepo.getInfoById(id);
 	}
+	
+	@GetMapping("byname/{fname}/{lname}")
+	public PersonDTO dataByName(@PathVariable String fname, @PathVariable String lname)
+	{
+		return prepo.getByName(fname, lname);
+	}
 
 }
